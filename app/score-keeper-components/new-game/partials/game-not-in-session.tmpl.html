@@ -1,13 +1,31 @@
+<form name="gameForm">
 <div class="new-game">
     <div class="row">
         <div class="col-xs-5"></div>
-        <label for="player1" class="col-xs-12-5 contestant-name-label">Player 1</label>
-        <label for="player2" class="col-xs-12-5 contestant-name-label">Player 2</label>
+        <label for="firstPlayerInput" class="col-xs-12-5 contestant-name-label">Player 1</label>
+        <label for="secondPlayerInput" class="col-xs-12-5 contestant-name-label">Player 2</label>
     </div>
     <div class="row">
         <div class="col-xs-5 text-right contestant-names">Enter Contestants Names:</div>
-        <div class="col-xs-12-5 contestant-name-input"><input ng-model="$ctrl.firstPlayer.name"  id="player1" type="text"/></div>
-        <div class="col-xs-12-5 contestant-name-input"><input ng-model="$ctrl.secondPlayer.name" id="player2" type="text"/></div>
-        <div class="col-xs-1"><button type="button" class="btn btn-default" ng-click="$ctrl.startGame()">Start Game</button></div>
+        <div class="col-xs-12-5 contestant-name-input"><input  type="text" id="firstPlayerInput" name="firstPlayerInput" ng-model="$ctrl.firstPlayer.name" ng-required="true"/></div>
+        <div class="col-xs-12-5 contestant-name-input"><input type="text" id="secondPlayerInput" name="secondPlayerInput" ng-model="$ctrl.secondPlayer.name" ng-required="true"/></div>
+        <div class="col-xs-1"><button type="submit" class="btn btn-default" ng-disabled="!gameForm.$dirty || gameForm.$invalid" ng-click="$ctrl.startGame()">Start Game</button></div>
     </div>
+
+    <div class="row">
+        <div class="col-xs-5"></div>
+        <div class="col-xs-12-5 error">
+            <div ng-if="gameForm.firstPlayerInput.$dirty || gameForm.firstPlayerInput.$touched" ng-messages="gameForm.firstPlayerInput.$error">
+                <div ng-message="required">Required Player 1</div>
+            </div>
+        </div>
+        <div class="col-xs-12-5 error">
+            <div ng-if="gameForm.secondPlayerInput.$dirty || gameForm.secondPlayerInput.$touched" ng-messages="gameForm.secondPlayerInput.$error">
+                <div ng-message="required">Required Player 2</div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
+</form>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp', ['ui.router','ngAnimate','ui.bootstrap'])
+angular.module('myApp', ['ui.router','ngAnimate','ngMessages','ui.bootstrap'])
     .config(['$stateProvider', function ($stateProvider) {
         $stateProvider
             .state('root', {

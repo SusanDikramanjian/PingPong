@@ -1,25 +1,30 @@
 <div class="new-game" ng-if="$ctrl.gameInSession">
     <div class="row">
-        <div class="col-xs-5"></div>
-        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.firstPlayer.name}}</label>
-        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.secondPlayer.name}}</label>
+        <div class=" col-xs-12 text-center title">Have a great game {{$ctrl.firstPlayer.name}} and {{$ctrl.secondPlayer.name}}</div>
+    </div>
+
+    <div class="row small-top-margin">
+        <div class="col-xs-4"></div>
+        <label class="col-xs-2 contestant-name-label text-uppercase text-center">{{$ctrl.firstPlayer.name}}</label>
+        <label class="col-xs-2 contestant-name-label text text-uppercase text-center">{{$ctrl.secondPlayer.name}}</label>
+    </div>
+
+    <div class="row small-top-margin">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-2 text-center"><button type="button" class="btn btn-default" ng-click="$ctrl.pointScored(1)">Scored a Point</button></div>
+        <div class="col-xs-2 text-center"><button type="button" class="btn btn-default" ng-click="$ctrl.pointScored(2)">Scored a Point</button></div>
+    </div>
+
+    <div class="row small-top-margin">
+        <div class="col-xs-4"></div>
+        <label class="col-xs-2 contestant-name-label text-center">{{$ctrl.firstPlayer.name}} 's Current Score</label>
+        <label class="col-xs-2 contestant-name-label text-center">{{$ctrl.secondPlayer.name}}'s Current Score</label>
     </div>
 
     <div class="row">
-        <div class="col-xs-5"></div>
-        <div class="col-xs-12-5"><button type="button" class="btn btn-default" ng-click="$ctrl.pointScored(1)">Scored a Point</button></div>
-        <div class="col-xs-12-5"><button type="button" class="btn btn-default" ng-click="$ctrl.pointScored(2)">Scored a Point</button></div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-5"></div>
-        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.firstPlayer.name}} 's Current Score</label>
-        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.secondPlayer.name}}'s Current Score</label>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-5"></div>
-        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.firstPlayer.currentScore}}</label>
-        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.secondPlayer.currentScore}}</label>
+        <div class="col-xs-4"></div>
+        <label class="col-xs-2 contestant-name-label text-center">{{$ctrl.firstPlayer.currentScore}}</label>
+        <label class="col-xs-2 contestant-name-label text-center">{{$ctrl.secondPlayer.currentScore}}</label>
     </div>
 </div>
+

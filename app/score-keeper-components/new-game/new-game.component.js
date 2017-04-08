@@ -14,25 +14,40 @@
         controller: NewGameController
     };
 
-    NewGameController.$inject = ['PlayerService'];
+    NewGameController.$inject = ['$state','PlayerService'];
 
-    function NewGameController(PlayerService){
+    function NewGameController($state,PlayerService){
         var ctrl = this;
 
         ctrl.$onInit = function(){
             ctrl.firstPlayer = PlayerService.getNewPlayer();
             ctrl.secondPlayer = PlayerService.getNewPlayer();
             ctrl.gameInSession = false;
+
         };
 
         /**
-         * A function that gets called when the 'Start Game' button gets clicked
+         * @name startGame
+         * @description
+         * A function that gets called when the 'Start Game' button gets clicked,
+         * after the player's names have been entered
          */
         ctrl.startGame = function(){
             ctrl.gameInSession = true;
         }
 
         /**
+
+         * @name newGame
+         * @description The user is allowed to start a fresh game at any time
+         */
+        ctrl.newGame = function(){
+            $state.go('new-game',{},{reload: true});
+        }
+
+        /**
+         * @name pointScored
+         * @description
          * A function which gets called when each of the players clicks on their respective 'Score Point' button
          */
         ctrl.pointScored = function(player){

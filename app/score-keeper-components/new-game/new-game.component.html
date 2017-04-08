@@ -1,3 +1,7 @@
 <ng-include ng-if="!$ctrl.gameInSession" src="'../score-keeper-components/new-game/partials/game-not-in-session.tmpl.html'"></ng-include>
 <ng-include ng-if="$ctrl.gameInSession" src="'../score-keeper-components/new-game/partials/game-in-session.tmpl.html'"></ng-include>
+<ng-include ng-if="$ctrl.gameInSession && $ctrl.winner" src="'../score-keeper-components/new-game/partials/winner.tmpl.html'"></ng-include>
 
+<div class="col-xs-12 text-center small-top-margin" ng-if="$ctrl.gameInSession">
+    <button type="button" class="btn btn-default" ng-click="$ctrl.newGame()">New Game</button>
+</div>
