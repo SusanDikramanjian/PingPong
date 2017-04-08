@@ -1,0 +1,48 @@
+/*-----colors section--------*/
+/*-----margin section--------*/
+/*--------fonts section --------*/
+.col-xs-12-5 {
+  width: 12.5%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-xs-12-5 {
+    width: 12.5%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-xs-12-5 {
+    width: 12.5%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-xs-12-5 {
+    width: 12.5%;
+    float: left;
+  }
+}
+.welcome-screen {
+  margin: 50px;
+}
+.welcome-screen .title {
+  color: #64b4cf;
+  font-size: 24pt;
+}
+.welcome-screen .sub-title {
+  font-size: 18pt;
+  color: #64b4cf;
+  margin-top: 50px;
+}
+.new-game {
+  margin: 50px;
+}
+.new-game .contestant-names {
+  font-weight: 800;
+  color: #64b4cf;
+}
+.new-game .contestant-name-label {
+  font-size: 10pt;
+  color: rgba(93, 140, 156, 0.7);
+}

@@ -1,0 +1,25 @@
+<div class="new-game" ng-if="$ctrl.gameInSession">
+    <div class="row">
+        <div class="col-xs-5"></div>
+        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.firstPlayer.name}}</label>
+        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.secondPlayer.name}}</label>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5"></div>
+        <div class="col-xs-12-5"><button type="button" class="btn btn-default" ng-click="$ctrl.pointScored(1)">Scored a Point</button></div>
+        <div class="col-xs-12-5"><button type="button" class="btn btn-default" ng-click="$ctrl.pointScored(2)">Scored a Point</button></div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5"></div>
+        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.firstPlayer.name}} 's Current Score</label>
+        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.secondPlayer.name}}'s Current Score</label>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5"></div>
+        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.firstPlayer.currentScore}}</label>
+        <label class="col-xs-12-5 contestant-name-label">{{$ctrl.secondPlayer.currentScore}}</label>
+    </div>
+</div>

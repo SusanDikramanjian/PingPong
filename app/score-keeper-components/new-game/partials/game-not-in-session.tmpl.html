@@ -1,0 +1,13 @@
+<div class="new-game">
+    <div class="row">
+        <div class="col-xs-5"></div>
+        <label for="player1" class="col-xs-12-5 contestant-name-label">Player 1</label>
+        <label for="player2" class="col-xs-12-5 contestant-name-label">Player 2</label>
+    </div>
+    <div class="row">
+        <div class="col-xs-5 text-right contestant-names">Enter Contestants Names:</div>
+        <div class="col-xs-12-5 contestant-name-input"><input ng-model="$ctrl.firstPlayer.name"  id="player1" type="text"/></div>
+        <div class="col-xs-12-5 contestant-name-input"><input ng-model="$ctrl.secondPlayer.name" id="player2" type="text"/></div>
+        <div class="col-xs-1"><button type="button" class="btn btn-default" ng-click="$ctrl.startGame()">Start Game</button></div>
+    </div>
+</div>
