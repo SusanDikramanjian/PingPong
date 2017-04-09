@@ -6,9 +6,9 @@ describe('PlayerService', function() {
 
     var playerService;
 
-    beforeEach(module('myApp'));
+   beforeEach(module('myApp'));
 
-   beforeEach(inject(function($injector, _$q_) {
+   beforeEach(inject(function($injector) {
         playerService = $injector.get('PlayerService');
     }));
 
