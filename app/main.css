@@ -68,3 +68,11 @@
 .new-game .contestant-names-label-container {
   margin-top: 20px;
 }
+.new-game .time {
+  color: #64b4cf;
+  font-size: 18pt;
+}
+.new-game .time-value {
+  color: #f4a816;
+  font-size: 18pt;
+}

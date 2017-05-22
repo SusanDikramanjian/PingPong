@@ -1,4 +1,4 @@
-<div class="new-game" ng-if="$ctrl.gameInSession">
+<div ng-if="!$ctrl.winner" class="new-game">
     <div class="row">
         <div class=" col-xs-12 text-center title">Have a great game {{$ctrl.firstPlayer.name}} and {{$ctrl.secondPlayer.name}}</div>
     </div>
@@ -26,5 +26,16 @@
         <label class="col-xs-2 contestant-name-label text-center">{{$ctrl.firstPlayer.currentScore}}</label>
         <label class="col-xs-2 contestant-name-label text-center">{{$ctrl.secondPlayer.currentScore}}</label>
     </div>
+
+    <div class="row">
+        <stop-watch stop-watch-api="$ctrl.stopWatchApi"></stop-watch>
+    </div>
+</div>
+
+
+<ng-include ng-if="$ctrl.winner" src="'../score-keeper-components/new-game/partials/winner.tmpl.html'"></ng-include>
+
+<div class="col-xs-12 text-center small-top-margin">
+    <button type="button" class="btn btn-default" ng-click="$ctrl.newGame()">New Game</button>
 </div>
 
